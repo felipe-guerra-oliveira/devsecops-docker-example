@@ -1,7 +1,6 @@
 # syntax=docker/dockerfile:1
 
 FROM maven:3.9.9-amazoncorretto-17-debian as package
-#ENV GITHUB_REPO="https://github.com/felipe-guerra-oliveira/simple-springboot-api.git"
 ENV JAVA_TOOL_OPTIONS -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:8008
 RUN apt-get update && apt-get install git -y
 WORKDIR /build
